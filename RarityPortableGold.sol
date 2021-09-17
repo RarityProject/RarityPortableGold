@@ -44,7 +44,7 @@ contract rarity_portable_gold is ERC20 {
     
     function exchangeRPG(uint from, uint amount) external {
         require(_isApprovedOrOwner(from), "Only can exchange your owner or approved summoner");
-        gold.transferFrom(this_token_id, from, this_token_id, amount);(from, this_token_id, amount);
+        gold.transferFrom(this_token_id, from, this_token_id, amount);
         _mint(_msgSender(), amount);
     }
 
